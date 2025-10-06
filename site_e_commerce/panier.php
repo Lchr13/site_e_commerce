@@ -3,9 +3,12 @@ session_start();
 $panier = $_SESSION['panier'] ?? [];
 
 // Suppression du panier si demandé après paiement (exemple)
-if (isset($_POST['payer'])) {
-    $facture = $panier;
-    $_SESSION['panier'] = [];
+if (isset($_POST['ajouter_panier'])) {
+    $index = $_POST['ajouter_panier'];
+    if (!isset($_SESSION['panier'])) {
+        $_SESSION['panier'] = [];
+    }
+    $_SESSION['panier'][] = $portrait_F[$index];
 }
 ?>
 <!DOCTYPE html>
@@ -107,3 +110,4 @@ function fermerFacture() {
 
 </body>
 </html>
+
