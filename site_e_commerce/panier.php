@@ -2,7 +2,7 @@
 session_start();
 $panier = $_SESSION['panier'] ?? [];
 
-// Suppression du panier si demandé après paiement (exemple)
+// Suppression du panier si demandé après paiement 
 if (isset($_POST['ajouter_panier'])) {
     $index = $_POST['ajouter_panier'];
     if (!isset($_SESSION['panier'])) {
@@ -76,10 +76,20 @@ if (isset($_POST['ajouter_panier'])) {
     </tbody>
 </table>
 
-<button id="btnPayer" onclick="afficherFacture()">Payer</button>
+<!-- Calcul du total directement après le tableau -->
+<?php
+$Total = 0;
+foreach ($panier as $item) {
+    $prix_num = floatval(str_replace(',', '.', preg_replace('/[^0-9,]/', '', $item['prix'])));
+    $Total += $prix_num;
+}
+?>
+<h3>Total à payer : <?= number_format($Total, 2, ',', ' ') ?> €</h3>
 
+<button id="btnPayer" onclick="afficherFacture()">Payer</button>
 <?php else: ?>
 <p>Votre panier est vide.</p>
+
 <?php endif; ?>
 
 <div id="modelFacture">
@@ -110,4 +120,5 @@ function fermerFacture() {
 
 </body>
 </html>
+
 
