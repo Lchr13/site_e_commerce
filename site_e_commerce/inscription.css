@@ -1,0 +1,63 @@
+body{
+
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  
+}
+
+.bloc_inscription{
+  background-color:white;
+  border: 3px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  height:700px;
+}
+
+.text-align-c {
+  text-align:center;
+}
+
+.text-deco{
+  text-decoration: underline;
+}
+
+.size{
+  /*taille ecriture pour nom id et mdp*/
+  font-size: 1.2em;  
+}
+
+
+.padding{
+  padding: 15px 250px;/*epaisseur haut bas , droit des etiquettes id et mdp*/
+  padding-left: 5px;/*coin gauche des etiquettes */
+  font-size: 1em; 
+}
+
+.message-erreur {
+  text-align: left;
+  margin-top: -140px;
+  font-size: 1.1em;  
+}
+
+.message-erreur p {
+  color: red;
+  font-weight: bold;
+}
+
+.bouton{
+  /*exterieur*/
+  margin-top: 80px;
+  margin-left: 155px;
+  padding: 15px 50px;
+  /*interieur*/
+  background-color: black; 
+  color: white;
+  font-size: 1em; 
+  font-weight: bold; 
+  
+}
