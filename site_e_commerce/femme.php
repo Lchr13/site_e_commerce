@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
+session_start();
 $portrait_F = [
     ["img" =>"/bijoux1.jpg","nom" => "Boucle D'Oreille En OR", "prix" => "150€"],
     ["img" =>"/bijoux2.jpg","nom" => "Boucle D'Oreille En OR", "prix" => "130€"],
@@ -138,4 +139,5 @@ if (isset($_POST['ajouter_panier'])) {
 
 
 </body>
+
 </html>
