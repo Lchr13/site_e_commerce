@@ -1,0 +1,196 @@
+/*HEADER*/
+
+/*PARTIE 1*/
+
+.titre_haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  padding: 5px 30px;
+  position: relative;
+}
+
+.placement_T {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* centre le texte dans l’espace disponible */
+  gap: 30px;
+
+}
+
+/*parti pour compte */
+.logo_user img {
+  width: 38px;
+  height: auto;
+}
+
+.compte_global {
+  position: relative;
+  display: inline-block;
+}
+
+#toggleCompte {
+  display: none;
+}
+
+.menu_compte {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 1000; /*pour faire apparaitre mon petit encadrer au dessus des autres */
+}
+
+.color_1{
+  color: orange;
+}
+.color_2{
+  color: black;
+}
+
+#toggleCompte:checked + label + .menu_compte {
+  display: block;
+}
+/* fin */
+
+/*partie pour boutik */
+
+.logo_boutique {
+  cursor: pointer;
+  font-weight: bold;
+  color: black; /* ou une autre couleur visible */
+}
+
+
+.boutique_global {
+  position: relative;
+  display: inline-block;
+}
+
+
+#toggleBoutique {
+  display: none;
+}
+
+.menu_boutique {
+  position: absolute;
+  top: 30px;
+  left: 50%; /* Centrage horizontal */
+  transform: translateX(-50%); /* Décalage pour centrage */
+  width: 90px;
+  height: auto;
+  background-color: white;
+  border: 3px solid black;
+  font-weight: bold;
+  padding: 40px;
+  display: none;
+  border-radius: 8px;
+  z-index: 1000; /*pour faire apparaitre mon petit encadrer au dessus des autres */
+}
+
+.color_1{
+  color: orange;
+}
+.color_2{
+  color: black;
+}
+
+#toggleBoutique:checked + label + .menu_boutique {
+  display: block;
+}
+
+/*fin*/
+
+/* PARTIE 2 */
+
+.deuxieme_titre_haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a; 
+  padding: 10px 30px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.marque {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-family: Georgia, sans-serif;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2.5em;
+  gap: 30px;
+}
+
+.menu > a , .bloc label{
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: border 0.3s ease;
+}
+
+/*menu > a veut dire que ce sont les <a href qui sont directement relier
+a la class menu donc les sous class ne sont pas concerner */
+.menu > a:hover, 
+.bloc label:hover,
+.menu a.active {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+/*BODY */
+
+.text_sur_img{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 1300px;
+  transform: translate(-50%, -50%); /*Centrer le bloc semi transparent */
+  color: lightyellow;
+  background-color: rgba(0, 0, 0, 0.4); /* fond semi-transparent */
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.4;
+  text-shadow: 2px 2px 5px black;
+
+}
+
+.sous_text{
+  font-family: 'Georgia', 'serif';
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+
+
+/*pied_page*/
+
+.pied_page {
+  background-color: orange;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-weight: 500;
+  
+
+
+}
+
